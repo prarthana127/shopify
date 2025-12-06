@@ -1,0 +1,229 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f7f9fc;
+  color: #1e1e1e;
+}
+
+/* APP LAYOUT */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  padding: 25px;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.sidebar a:hover {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+/* MAIN CONTENT - centered page layout */
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.page-content,
+.home-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* PAGE TITLES */
+.page-content h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+/* DASHBOARD STATS GRID */
+.stats-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.stat-card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  border-left: 6px solid #6366f1;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.stat-card h3 {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 34px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+/* ORDER & CUSTOMER LISTS */
+.orders-list,
+.customers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-card,
+.customer-card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 5px solid #10b981;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+}
+
+.order-card:hover,
+.customer-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+}
+
+.customer-email {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.customer-orders {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* FEEDBACK STATES */
+.loading,
+.error,
+.no-data {
+  text-align: center;
+  padding: 35px;
+  font-size: 17px;
+}
+
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 8px;
+}
+
+.no-data {
+  background: #f3f4f6;
+  color: #6b7280;
+  border-radius: 8px;
+}
+
+/* HOME PAGE */
+.home-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.home-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #202123;
+}
+
+.home-subtitle {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* ICON CARDS ON HOMEPAGE */
+.home-card-grid {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.home-card {
+  width: 260px;
+  height: 160px;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.home-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.home-card h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #555;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.home-icon {
+  font-size: 40px;
+}
